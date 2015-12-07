@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="UnifyGUI">
+    <output-path>$PROJECT_DIR$/out/artifacts/UnifyGUI</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="unify.UnifyGUI" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="UnifyGUI.jar">
+        <element id="module-output" name="UnifyGUI" />
+      </element>
+    </root>
+  </artifact>
+</component>

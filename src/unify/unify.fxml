@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unify.Controller">
+    <children>
+        <MenuBar id="menuBar" prefHeight="30.0" prefWidth="600.0">
+            <menus>
+                <Menu id="fileMenu" mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem id="fileNew" mnemonicParsing="false" onAction="#fileNewClicked" text="New">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                     </accelerator></MenuItem>
+                        <MenuItem id="fileOpen" mnemonicParsing="false" onAction="#fileOpenClicked" text="Open">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="O" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                     </accelerator></MenuItem>
+                        <MenuItem id="fileClose" mnemonicParsing="false" onAction="#fileCloseClicked" text="Close">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="W" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                     </accelerator></MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem id="fileSave" mnemonicParsing="false" onAction="#fileSaveClicked" text="Save">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                     </accelerator></MenuItem>
+                        <MenuItem id="fileSaveAs" mnemonicParsing="false" onAction="#fileSaveAsClicked" text="Save As" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem id="fileExit" mnemonicParsing="false" onAction="#fileExitClicked" text="Exit" />
+                    </items>
+                </Menu>
+                <Menu id="editMenu" mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem id="editUndo" mnemonicParsing="false" onAction="#editUndoClicked" text="Undo">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Z" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                     </accelerator></MenuItem>
+                        <MenuItem id="editRedo" mnemonicParsing="false" onAction="#editRedoClicked" text="Redo">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Z" control="UP" meta="UP" shift="DOWN" shortcut="DOWN" />
+                     </accelerator></MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem id="editCut" mnemonicParsing="false" onAction="#editCutClicked" text="Cut">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="X" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                     </accelerator></MenuItem>
+                        <MenuItem id="editCopy" mnemonicParsing="false" onAction="#editCopyClicked" text="Copy">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="C" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                     </accelerator></MenuItem>
+                        <MenuItem id="editPaste" mnemonicParsing="false" onAction="#editPasteClicked" text="Paste">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="V" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                     </accelerator></MenuItem>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Label contentDisplay="RIGHT" layoutX="50.0" layoutY="55.0" text="キーワード" />
+        <TextField fx:id="inputText" layoutX="125.0" layoutY="50.0" prefHeight="24.0" prefWidth="350.0" />
+        <Label contentDisplay="RIGHT" layoutX="35.0" layoutY="105.0" text="データベース" />
+        <TableView fx:id="sentenceTable" layoutX="125.0" layoutY="100.0" prefHeight="250.0" prefWidth="350.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="100.0">
+            <columns>
+                <TableColumn fx:id="sentenceColumn" minWidth="350.0" prefWidth="350.0" resizable="false" text="データベース" />
+            </columns>
+        </TableView>
+        <Button id="addButton" layoutX="512.5" layoutY="130.0" mnemonicParsing="false" onAction="#addButtonClicked" text="追加" textAlignment="CENTER" />
+        <Button id="searchButton" layoutX="512.5" layoutY="170.0" mnemonicParsing="false" onAction="#searchButtonClicked" text="検索" textAlignment="CENTER" />
+        <Button id="deleteButton" layoutX="512.5" layoutY="210.0" mnemonicParsing="false" onAction="#deleteButtonClicked" text="削除" textAlignment="CENTER" />
+
+
+    </children>
+</AnchorPane>
